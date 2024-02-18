@@ -1,7 +1,6 @@
 .env
 .npm
 node_modules/
-cloudinary.js
 dist/
 build/
 tmp/
