@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 //Middlware Addition
 app.use(express.json());
 const fileUpload = require("express-fileupload"); // Ye server per Upload karta hai
-app.use(fileUpload);
+app.use(fileUpload());
 
 // DB Connection
 const db = require("./config/database");
@@ -21,7 +21,7 @@ cloudinary.cloudinaryConnect();
 
 // API route
 const Upload = require("./routes/FileUpload");
-app.use("api/v1/upload", Upload);
+app.use("/api/v1/upload", Upload);
 
 // Activate Server
 app.listen(PORT, () => {
