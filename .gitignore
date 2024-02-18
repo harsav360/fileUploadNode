@@ -2,7 +2,6 @@
 .npm
 node_modules/
 cloudinary.js
-database.js
 dist/
 build/
 tmp/
