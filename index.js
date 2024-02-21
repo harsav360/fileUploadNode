@@ -9,7 +9,12 @@ const PORT = process.env.PORT || 3000;
 //Middlware Addition
 app.use(express.json());
 const fileUpload = require("express-fileupload"); // Ye server per Upload karta hai
-app.use(fileUpload());
+app.use(
+  fileUpload({
+    useTempFiles: true,
+    tempFileDir: "/tmp/",
+  })
+);
 
 // DB Connection
 const db = require("./config/database");
